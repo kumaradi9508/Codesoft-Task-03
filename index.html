@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Mode Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 🔵 OUTSIDE the calculator box -->
+ <header class="top-bar">
+  <h1 class="app-title centered">
+    <span class="highlight-dark">Solve</span><span class="highlight-blue">Wise</span>
+  </h1>
+
+  <div class="top-controls">
+    <div class="modes">
+      <button class="mode-btn" data-mode="basic">Basic</button>
+      <button class="mode-btn" data-mode="scientific">Scientific</button>
+      <button class="mode-btn" data-mode="currency">Currency</button>
+    </div>
+    <button id="darkToggle" class="theme-btn">Toggle Theme</button>
+  </div>
+</header>
+
+
+  <!-- 🟣 Calculator container starts below -->
+  <div class="container">
+    <div class="calculator" id="calculator">
+      <input type="text" id="display" readonly />
+
+      <div class="buttons basic-mode">
+        <!-- Basic buttons injected via JS -->
+      </div>
+
+      <div class="buttons scientific-mode hidden">
+        <!-- Scientific buttons injected via JS -->
+      </div>
+
+      <div class="currency-mode hidden">
+  <select id="fromCurrency">
+    <option value="INR">INR</option>
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+  </select>
+
+  <select id="toCurrency">
+    <option value="USD">USD</option>
+    <option value="INR">INR</option>
+    <option value="EUR">EUR</option>
+  </select>
+
+  <input type="number" id="currencyInput" placeholder="Enter amount" />
+  <button id="convertBtn">Convert</button>
+  <p id="currencyResult"></p>
+</div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="currency.js"></script>
+</body>
+</html>

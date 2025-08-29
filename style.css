@@ -1,0 +1,212 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb, #90caf9);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Animation for background flow */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.container {
+  max-width: 360px; /* narrower for vertical shape */
+  margin: 50px auto;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+.toggles {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+select, button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+select:hover, button:hover {
+  transform: scale(1.05);
+}
+
+#display {
+  width: 92%;
+  padding: 1rem;
+  height: 20px;
+  font-size: 2rem;
+  text-align: right;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+}
+.top-bar {
+  max-width: 360px;
+  margin: 2rem auto 1rem auto;
+  text-align: center;
+}
+
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.modes {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.theme-btn {
+  padding: 0.5rem 1rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+/* Calculator Buttons Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.buttons button {
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  background: #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.buttons button:hover {
+  background: #d1d1d1;
+}
+
+/* Currency Mode */
+.currency-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.currency-mode input, .currency-mode select {
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Hidden Class for Mode Switching */
+.hidden {
+  display: none !important;
+}
+
+/* 🌙 Dark Mode Styles */
+body.dark {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: gradientFlowDark 20s ease infinite;
+  color: white;
+}
+@keyframes gradientFlowDark {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+body.dark .container {
+  background: rgba(40, 40, 40, 0.6);
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+}
+
+body.dark #display,
+body.dark .currency-mode input,
+body.dark .currency-mode select {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgb(16, 1, 1);
+}
+
+body.dark .buttons button {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark button:hover,
+body.dark select:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+/* Centered & Styled Title */
+.app-title.centered {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin: 0 auto 1rem auto;
+  animation: titlePop 1.2s ease-out;
+  transition: transform 0.3s ease;
+}
+
+.app-title:hover {
+  transform: scale(1.05);
+}
+
+.highlight-dark {
+  color: black;
+}
+
+.highlight-blue {
+  color: #3498db;
+}
+
+/* Pop animation on load */
+@keyframes titlePop {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
