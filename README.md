@@ -55,7 +55,7 @@ The project is a multi-functional calculator that allows users to:
   .JavaScript (Vanilla) – Functionality & interactivity
 
 
-🎯 GitHub: https://github.com/kumaradi9508/Codesoft-Task-03
+🎯 GitHub: https://github.com/kumaradi9508/Codesoft-Task-03/tree/main
 
 💡 Future Enhancements:
 
